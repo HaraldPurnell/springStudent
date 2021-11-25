@@ -1,0 +1,167 @@
+/* 
+    Reset
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, 
+tbody, tfoot, thead, tr, th, td, article, aside, 
+canvas, details, embed, figure, figcaption, footer, 
+header, hgroup, menu, nav, output, ruby, section, 
+summary, time, mark, audio, video 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body
+{
+    font-family: Trebuchet MS;
+    background: #fff5e6;
+    color: #000000;
+}
+
+#table_div, #tab_div a, td, th, h2
+{
+    padding: 14px 16px;
+}
+
+#tab_div,  #home_table_header, #button_input, #tab_div a 
+{
+    box-shadow: none;
+    outline: none;
+    background: #ff9900;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#button_input
+{
+    width: 25%;
+    float: right;
+    background-color: #ffad33;
+    border-color: #ffad33;
+    color: #ffffff;
+}
+
+#button_input:hover
+{
+    background-color: #ff9900;
+    border-color: #ff9900;
+}
+
+h2 
+{
+    font-size: 18px;
+}
+
+#page_title
+{
+    float: left;
+}
+
+#add_form
+{
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    position: absolute; 
+}
+
+#tab_div 
+{
+    overflow: hidden;
+    text-align: right;
+    top: 0;
+    position: sticky;
+}
+
+#tab_div a 
+{
+    transition: 0.3s;
+    float: right;
+    height: 100%;
+}
+
+#tab_div #active, #tab_div a:hover
+{
+    color: black;
+    background-color: #fff5e6;
+}
+
+#records_table 
+{
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-collapse: collapse;
+}
+
+#home_table_content, input
+{
+    font-size: 15px;
+}
+
+#home_table_content:nth-child(even) 
+{
+    background-color: #ffe0b3;
+}
+
+#home_table_content:hover,  #home_table_content:nth-child(even):hover, #tab_div a:hover
+{
+    background-color: #ffcc80;
+}
+
+input[type="text"], input[type="number"]
+{
+    width: 15em;
+}
+
+select 
+{
+    width: 100%;
+    background: #ffffff;
+}
+
+input[type="text"], input[type="number"], select, #add_form {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;   
+}
+
+input:focused
+{
+    border: #64adde;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#add_form, #records_table
+{
+    border: 0.1em solid #000000;
+    border-radius: 1em;
+    white-space: nowrap; 
+}
+
+#add_form
+{
+    box-shadow: 5px 10px #888888;
+    background: #ffffff;
+}
