@@ -33,7 +33,7 @@ spring.datasource.username=
 spring.datasource.password= 
 ```
 
-6. Open new command prompt and navigate to the project repository target folder and enter the following command 
+6. Open new admin command prompt and navigate to the project repository target folder and enter the following command 
 
 ```
 java -jar springStudent-0.0.1-SNAPSHOT.jar
