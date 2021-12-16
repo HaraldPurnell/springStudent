@@ -40,6 +40,11 @@ spring.datasource.password=
 java -jar springStudent-0.0.1-SNAPSHOT.jar
 ```
 8. Open desired browser (Firefox and Opera were used during development) and enter localhost:8080 into the web address bar
+NOTE: If application is running correctly, after navigating to localhost:8080 you should see the below screen
+
+![editorDemo](https://github.com/HaraldPurnell/springStudent/blob/main/image/editorDemo.jpg)
+
+10. Enter root into both username and password fields to enter system 
 
 ## Dependencies
 
