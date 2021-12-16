@@ -13,11 +13,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         
         <div id="tab_div" >
             <h2 id="page_title">Home</h2>
-            <a href="/new_student">Add</a>
-            <a id="active">Home</a>
+            <a href="/logout" id="nav_logout">Logout</a>
+            <a href="/add" class="nav_a">Add</a>
+            <a id="active" class="nav_a">Home</a>
         </div>
 
-        <div align="center" id="table_div">
+        <div align="center" id="div_table">
             <table id="records_table" border="1" cellpadding="10">
                 <thead>
                     <tr id="home_table_header">
@@ -48,7 +49,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <td th:text="${student.graduated}"/>
                         <td>
                             <a th:href="@{/edit/{student_id}(student_id=${student.student_id})}">Edit</a>
-                            <a th:href="@{/delete/{student_id}(student_id=${student.student_id})}">Delete</a>
+                            <a th:href="@{/btn_delete/{student_id}(student_id=${student.student_id})}">Delete</a>
                         </td> 
                         
                     </tr>

@@ -25,3 +25,8 @@ ON DUPLICATE KEY UPDATE course_id=VALUES(course_id);
 INSERT INTO course(course_id, course_name, course_description, course_level)VALUES(6, 'Computer Science', 'BSc', 6)
 ON DUPLICATE KEY UPDATE course_id=VALUES(course_id);
 
+INSERT INTO account(username, password)VALUES('smithJohn01', '$2a$12$boM4fKYjpuRdFh.hIHY5Ae1cwWFWdc.7P7qxo47Z4dAGhTp8i1qEe')
+ON DUPLICATE KEY UPDATE username=VALUES(username);
+
+INSERT INTO account(username, password)VALUES('root', '$2a$12$0kBlZ/yQlrGajq0nwDJkQelGZ02vMyssr730Fzzc.S1F09Rx2FtAm')
+ON DUPLICATE KEY UPDATE username=VALUES(username);

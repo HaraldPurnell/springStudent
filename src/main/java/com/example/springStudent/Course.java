@@ -9,7 +9,6 @@ package com.example.springStudent;
  * @author Uglybear
  */
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

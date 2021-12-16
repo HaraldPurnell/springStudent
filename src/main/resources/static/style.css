@@ -28,10 +28,11 @@ body
     color: #000000;
 }
 
-#table_div, #tab_div a, td, th, h2
+#div_table, #tab_div a, td, th, h2, #error_text, p
 {
     padding: 14px 16px;
 }
+
 
 #tab_div,  #home_table_header, #button_input, #tab_div a 
 {
@@ -60,17 +61,28 @@ body
     border-color: #ff9900;
 }
 
-h2 
+h2, #custom_error 
 {
     font-size: 18px;
 }
 
-#page_title
+#error_text
 {
-    float: left;
+    font-size: 16px;
+    color: #ff0000;
 }
 
-#add_form
+#page_title
+{
+    
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    position: absolute; 
+    
+}
+
+#div_form
 {
     right: 50%;
     bottom: 50%;
@@ -86,7 +98,7 @@ h2
     position: sticky;
 }
 
-#tab_div a 
+#tab_div .nav_a 
 {
     transition: 0.3s;
     float: right;
@@ -97,6 +109,11 @@ h2
 {
     color: black;
     background-color: #fff5e6;
+}
+
+#nav_logout
+{
+    float: left;
 }
 
 #records_table 
@@ -121,18 +138,20 @@ h2
     background-color: #ffcc80;
 }
 
-input[type="text"], input[type="number"]
-{
-    width: 15em;
-}
-
 select 
 {
     width: 100%;
     background: #ffffff;
 }
 
-input[type="text"], input[type="number"], select, #add_form {
+input[type="text"], input[type="number"], input[type="password"]
+{
+    width: 15em;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+input, select, #div_form {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;   
@@ -153,14 +172,14 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-#add_form, #records_table
+#div_form, #records_table
 {
     border: 0.1em solid #000000;
     border-radius: 1em;
     white-space: nowrap; 
 }
 
-#add_form
+#div_form
 {
     box-shadow: 5px 10px #888888;
     background: #ffffff;

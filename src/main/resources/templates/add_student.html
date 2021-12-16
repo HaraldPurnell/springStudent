@@ -14,12 +14,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         
         <div id="tab_div" >
             <h2 id="page_title">Add</h2>
-            <a id="active">Add</a>
-            <a href="/home">Home</a>
+            <a href="/logout" id="nav_logout">Logout</a>
+            <a id="active" class="nav_a">Add</a>
+            <a href="/home" class="nav_a">Home</a>
         </div>
         
-        <div id="add_form">
-            <form action="#" th:action="@{/add}" method="post">
+        <div id="div_form">
+            <form action="#" th:action="@{/btn_add}" method="post">
                 <table border="0" cellpadding="10">
                     
                     <tr>
@@ -74,7 +75,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     </tr>
                     
                     <tr>
-                        <td colspan="2"><input id="button_input" type="submit" value="Submit"/></td>
+                        <td colspan="2"><input id="button_input" type="submit" value="Add"/></td>
                     </tr>
                 </table>
                 

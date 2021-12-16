@@ -13,12 +13,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body> 
         <div id="tab_div" >
             <h2 id="page_title">Edit</h2>
-            <a href="/new_student">Add</a>
-            <a href="/home">Home</a>
+            <a href="/logout" id="nav_logout">Logout</a>
+            <a href="/add" class="nav_a">Add</a>
+            <a href="/home" class="nav_a">Home</a>
         </div>
         
-        <div id="add_form">
-            <form action="#" th:action="@{/update}" th:object="${student}">
+        <div id="div_form">
+            <form action="#" th:action="@{/btn_edit}" th:object="${student}">
                 <table border="0" cellpadding="10">
                     
                     <tr>

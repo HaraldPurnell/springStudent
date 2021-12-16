@@ -29,3 +29,9 @@ CREATE TABLE IF NOT EXISTS student (
     PRIMARY KEY (student_id),
     FOREIGN KEY (course_id) REFERENCES course(course_id)
 );
+
+CREATE TABLE IF NOT EXISTS account (
+    username VARCHAR (30) NOT NULL,
+    password VARCHAR (200) NOT NULL,
+    PRIMARY KEY (username)
+);
