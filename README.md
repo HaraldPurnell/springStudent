@@ -34,12 +34,11 @@ spring.datasource.password=
 ```
 6. After editing application.properties, clean and build the project 
 
-7. Open new admin Command Prompt and navigate to the project repository target folder and enter the following command 
+7. Run the application using your chosen IDE, OR open new admin Command Prompt and navigate to the project repository target folder and enter the following command 
 
 ```
 java -jar springStudent-0.0.1-SNAPSHOT.jar
 ```
-
 8. Open desired browser (Firefox and Opera were used during development) and enter localhost:8080 into the web address bar
 
 ## Dependencies
