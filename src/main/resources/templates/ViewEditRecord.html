@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Student Manager</title>
+        <meta charset="UTF-8"/>
+        <link  type="text/css" th:href="@{/style.css}" rel="stylesheet"/>
+        
+    </head>
+    <body> 
+        <div id="tab_div" >
+            <h2 id="page_title">Edit</h2>
+            <a href="/logout" id="nav_logout">Logout</a>
+            <a href="/insertStudent" class="nav_a">Add</a>
+            <a href="/home" class="nav_a">Home</a>
+        </div>
+        
+        <div id="div_form">
+            <form action="#" th:action="@{/btnStudentUpdate}" th:object="${student}">
+                <table border="0" cellpadding="10">
+                    
+                    <tr>
+                        <td>Student Id:</td>
+                        <td><input type="text" th:field="*{studentId}" name="studentId" readonly="readonly"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input type="text" th:field="*{studentFirstName}" name="studentFirstName" required="required"  minlength="2" maxlength="30"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" th:field="*{studentLastName}" name="studentLastName" required="required"  minlength="2" maxlength="30"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Gender:</td>
+                        <td>
+                            <select th:field="*{studentGender}" name="studentGender">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Country Code:</td>
+                        <td><input th:field="*{studentCountryCode}" type="text" name="studentCountryCode" required="required" minlength="1" maxlength="5"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Contact Number:</td>
+                        <td><input type="text" th:field="*{studentContactNum}" name="studentContactNum" required="required" minlength="10" maxlength="10" /></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>House Number:</td>
+                        <td><input type="text" th:field="*{studentHouseNum}" name="studentHouseNum" required="required" minlength="1" maxlength="10"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Postcode:</td>
+                        <td><input type="text" th:field="*{studentPostcode}" name="studentPostcode" required="required" minlength="6" maxlength="10"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Course:</td>
+                        <td>
+                            <select th:field="*{courseId}" name="courseId" id="course_id">
+                                <option th:each="course : ${courses}" th:value="${course.courseId}" th:text="${course.courseDescription + ' ' + course.courseName}"/>
+                            </select>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Status:</td>
+                        <td>
+                            <select th:field="*{studentGraduated}" name="studentGraduated">
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2"><input id="button_input" type="submit" value="Submit"/></td>
+                    </tr>
+                </table>
+                
+            </form>
+        </div>
+    </body>
+</html>

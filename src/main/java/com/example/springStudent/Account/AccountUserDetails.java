@@ -12,27 +12,27 @@ import org.springframework.security.core.userdetails.UserDetails;
  *
  * @author Uglybear
  */
-public class AccountDetails implements UserDetails {
+public class AccountUserDetails implements UserDetails {
 
-    private Account account;
+    private final Account account;
 
-    public AccountDetails(Account account) {
+    public AccountUserDetails(Account account) {
         this.account = account;
     }
     
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
+    public Collection <? extends GrantedAuthority> getAuthorities() {
         return null;
     }
 
     @Override
     public String getPassword() {
-        return account.getPassword();
+        return account.getAccountPassword();
     }
 
     @Override
     public String getUsername() {
-        return account.getUsername();
+        return account.getAccountUsername();
     }
 
     @Override

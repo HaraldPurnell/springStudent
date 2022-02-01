@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Student Manager</title>
+        <meta charset="UTF-8"/>
+        <link  type="text/css" th:href="@{/style.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="div_form">
+            <form action="#" th:action="@{/login}" method="post">
+                
+                <table border="0" cellpadding="10">
+
+                    <tr>
+                        <td> <h2>Login</h2></td>
+                        <td><p th:if="${param.error}" id="error_text">Invalid username or password!</p></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Username:</td>
+                        <td><input type="text" name="accountUsername" required="required"  minlength="2" maxlength="30" /></td>
+                    </tr>
+                        
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="accountPassword" required="required"  minlength="2" maxlength="30"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2"><input id="button_input" type="submit" value="Login"/></td>
+                    </tr>
+                    
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

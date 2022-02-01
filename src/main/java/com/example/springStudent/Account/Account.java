@@ -4,6 +4,7 @@
  */
 package com.example.springStudent.Account;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -15,42 +16,45 @@ import javax.persistence.Id;
 public class Account {
     
     @Id
-    private String username;
-    private String password;
+    @Column(name = "accountUsername")
+    private String accountUsername;
+    @Column(name = "accountPassword")
+    private String accountPassword;
 
     public Account(){}
     
+    
     public Account(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    /**s
-     * @return the username
-     */
-    public String getUsername() {
-        return username;
+        accountUsername = username;
+        accountPassword = password;
     }
 
     /**
-     * @param username the username to set
+     * @return the accountUsername
      */
-    public void setUsername(String username) {
-        this.username = username;
+    public String getAccountUsername() {
+        return accountUsername;
     }
 
     /**
-     * @return the password
+     * @param accountUsername the accountUsername to set
      */
-    public String getPassword() {
-        return password;
+    public void setAccountUsername(String accountUsername) {
+        this.accountUsername = accountUsername;
     }
 
     /**
-     * @param password the password to set
+     * @return the accountPassword
      */
-    public void setPassword(String password) {
-        this.password = password;
+    public String getAccountPassword() {
+        return accountPassword;
+    }
+
+    /**
+     * @param accountPassword the accountPassword to set
+     */
+    public void setAccountPassword(String accountPassword) {
+        this.accountPassword = accountPassword;
     }
 
 }

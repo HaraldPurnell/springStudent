@@ -6,32 +6,31 @@
  * Author:  Uglybear
  * Created: 15 Nov 2021
  */
-
 CREATE TABLE IF NOT EXISTS course (
-    course_id          INTEGER      AUTO_INCREMENT,
-    course_name        VARCHAR (50) NOT NULL,
-    course_description VARCHAR (10) NOT NULL,
-    course_level       INTEGER (1)  NOT NULL,
-    PRIMARY KEY (course_id)
+    courseId          INTEGER      AUTO_INCREMENT,
+    courseName        VARCHAR (50) NOT NULL,
+    courseDescription VARCHAR (10) NOT NULL,
+    courseLevel       INTEGER (1)  NOT NULL,
+    PRIMARY KEY (courseId)
 );
 
 CREATE TABLE IF NOT EXISTS student (
-    student_id   INTEGER      AUTO_INCREMENT,
-    first_name   VARCHAR (30) NOT NULL,
-    last_name    VARCHAR (30) NOT NULL,
-    gender       VARCHAR (1)  NOT NULL,
-    country_code VARCHAR (5)  NOT NULL,
-    contact_no   VARCHAR (10) NOT NULL,
-    house_no     VARCHAR (10) NOT NULL,
-    postcode     VARCHAR (10) NOT NULL,
-    course_id    INTEGER      NOT NULL,
-    graduated    TINYINT (1)  NOT NULL,
-    PRIMARY KEY (student_id),
-    FOREIGN KEY (course_id) REFERENCES course(course_id)
+    studentId           INTEGER      AUTO_INCREMENT,
+    studentFirstName    VARCHAR (30) NOT NULL,
+    studentLastName     VARCHAR (30) NOT NULL,
+    studentGender       VARCHAR (1)  NOT NULL,
+    studentCountryCode  VARCHAR (5)  NOT NULL,
+    studentContactNum   VARCHAR (10) NOT NULL,
+    studentHouseNum     VARCHAR (10) NOT NULL,
+    studentPostcode     VARCHAR (10) NOT NULL,
+    studentGraduated    BOOLEAN      NOT NULL,
+    courseId            INTEGER,
+    PRIMARY KEY (studentId),
+    FOREIGN KEY (courseId) REFERENCES course(courseId)
 );
 
 CREATE TABLE IF NOT EXISTS account (
-    username VARCHAR (30) NOT NULL,
-    password VARCHAR (200) NOT NULL,
-    PRIMARY KEY (username)
+    accountUsername VARCHAR (30) NOT NULL,
+    accountPassword VARCHAR (200) NOT NULL,
+    PRIMARY KEY (accountUsername)
 );

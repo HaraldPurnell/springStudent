@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Student Manager</title>
+        <meta charset="UTF-8"/>
+        <link  type="text/css" th:href="@{/style.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        
+        <div id="tab_div" >
+            <h2 id="page_title">Home</h2>
+            <a href="/logout" id="nav_logout">Logout</a>
+            <a href="/insertStudent" class="nav_a">Add</a>
+            <a id="active" class="nav_a">Home</a>
+        </div>
+
+        <div align="center" id="div_table">
+            <table id="records_table" border="1" cellpadding="10">
+                <thead>
+                    <tr id="home_table_header">
+                        <th>Student ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Country Code</th>
+                        <th>Contact Number</th>
+                        <th>House Number</th>
+                        <th>Postcode</th>
+                        <th>Graduated?</th>
+                        <th>Course</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="student : ${students}" id="home_table_content">
+                        <td th:text="${student.studentId}"/>
+                        <td th:text="${student.studentFirstName}"/>
+                        <td th:text="${student.studentLastName}"/>
+                        <td th:text="${student.studentGender}"/>
+                        <td th:text="${student.studentCountryCode}"/>
+                        <td th:text="${student.studentContactNum}"/>
+                        <td th:text="${student.studentHouseNum}"/>
+                        <td th:text="${student.studentPostcode}"/>
+                        <td th:text="${student.studentGraduated}"/>
+                        <td th:text="${student.courseId}"/> 
+                        <td>
+                            <a th:href="@{/edit/{studentId}(studentId=${student.studentId})}">Edit</a>
+                            <a th:href="@{/btnStudentDelete/{studentId}(studentId=${student.studentId})}">Delete</a>
+                        </td> 
+                        
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </body>
+</html>
